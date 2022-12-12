@@ -5,7 +5,7 @@ function MakePayment(props) {
 
   async function OnPay() {
     var data = {contact: sessionStorage.getItem('contact'), fullName: sessionStorage.getItem('name'), monthStatus: sessionStorage.getItem('status'), DOB: sessionStorage.getItem('dob'), batch: sessionStorage.getItem('batch'), email: sessionStorage.getItem('email')};
-    await axios.post('https://yogaregistrationtask.up.railway.app/addInfo', data)
+    await axios.post('https://yoga-registration-task.up.railway.app/addInfo', data)
     .then((res) => {
       if(res.data.code === 200) {
         props.ss();
