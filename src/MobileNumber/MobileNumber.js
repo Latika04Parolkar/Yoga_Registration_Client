@@ -11,7 +11,7 @@ function MobileNumber(props) {
       alert('Please enter your mobile number')
     }else {
       if(contact.match(validMobileRegex)) {
-        const req = await axios.post('https://yogaregistrationtask.up.railway.app/addCustomer', data);
+        const req = await axios.post('https://yoga-registration-task.up.railway.app/addCustomer', data);
         if(req.data.monthStatus === 'First Time') {
           sessionStorage.setItem('contact', contact);
           props.change(1);
